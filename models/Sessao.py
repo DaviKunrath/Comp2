@@ -36,3 +36,23 @@ class Sessao:
         opt = int(input("Escolha a opç5ão desejada:"))
         filmeopt = funcao.filmes[opt-1]
         self.Filme = filmeopt
+
+         def escolheAssento(self, assento):
+        """Escolha assentos entre 1 e 150"""
+        cadeiras_disponíveis = [range(1,150,1)]
+        cadeiras_escolhidas = [assento]
+        for x in cadeiras_disponiveis:
+            if x in cadeiras_escolhidas:
+                cadeiras_disponiveis.remove(x)
+        return cadeiras_disponiveis
+
+    def cancelaAssento(self, assento):
+        cadeiras_disponiveis.add(x)
+        cadeiras_escolhidas.remove(x)
+        return cadeiras_disponiveis
+        
+
+    def Bilhete(self):
+        bilhete = list(self.Nome, self.Ano, self.Duracao, self.Genero, self.FaixaEtaria,
+                       self.Horario, self.Sala, self.Dubleg, self.Dimensao, self.Bilhete)
+        return bilhete
