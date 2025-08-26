@@ -1,0 +1,108 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMXyUynK2R3izOQMtc32ADb",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/DaviKunrath/Comp2/blob/main/CAP%C3%8DTULO%203%20TUTORIAL%20PARA%20RELEMBRAR%20PYTHON\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 49,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EFHIY0y8CH0c",
+        "outputId": "d35fb29d-0f46-48f7-abe8-60620edc2d61"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Now', 'my', 293, 43.2, 'something']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 49
+        }
+      ],
+      "source": [
+        "##########################CAPÍTULO 3 DO TUTORIAL DE PYTHON######################\n",
+        "\n",
+        "list1 = ['oi', 'meu' , 293, 8]                                 #listas são mutáveis, tuplas são imutáveis\n",
+        "list2 = [51, 'fine']\n",
+        "list1.extend(list2)                                            #adicionar uma lista a outra\n",
+        "list1.pop()                                                    #remove o elemento da lista, quando sem entrada, remove o último item\n",
+        "list1\n",
+        "\n",
+        "type(('now'))                                                  #string\n",
+        "type(('now',))                                                 #tupla\n",
+        "\n",
+        "somedict = {'apple':12, 'banana':25, 'lemon': 'unknown'}       #dicionário\n",
+        "somedict['apple'] = somedict['banana'] + 23                    #os elementos são acessados por um índice\n",
+        "somedict['orange'] = 85                                        #adicionei elemento no dicionário\n",
+        "somedict['orange'] -= 10                                       #comi 10 laranjas\n",
+        "somedict['apple'] = 0                                          #comi todas as maçãs\n",
+        "del somedict['lemon']                                          #tirar elemento do dicionário\n",
+        "somedict\n",
+        "\n",
+        "from collections import OrderedDict                            #parece o dicionário, mas lembra a ordem de inserção dos elementos\n",
+        "somevar = OrderedDict(a=23, b=32)\n",
+        "somevar[\"something\"] = 643\n",
+        "list(somevar)\n",
+        "\n",
+        "someset1 = {243, 54}                                            #criando conjunto a partir de um dicionário\n",
+        "someotherset = {243, 54, \"ke\", 2.3}                             #idem\n",
+        "someset2 = set([243, 54])                                       #idem, a partir de uma lista\n",
+        "someset3 = set([\"aa\", 243, 54, 243, 1, \"aa\"])\n",
+        "someset3                                                        #cada elemento é único no conjunto\n",
+        "list(someset3)                                                  #transforma em lista\n",
+        "\n",
+        "set1 = set([\"aa\", 243, 54.3, 243, 1])                           #operações entre conjuntos\n",
+        "set2 = set([\"aa\", 4.3, 1, \"aa\"])\n",
+        "set2.add(54.3)                                                  #adds element to set\n",
+        "set1.discard(\"aa\")                                              #removes element from set\n",
+        "set3 = set1.intersection(set1, set2)                            #interseção dos conjuntos\n",
+        "set3\n",
+        "somefset = frozenset([\"aa\", 243, 54, 243, 1, \"aa\"])             #congela os elementos, vira um conjunto imutável\n",
+        "\n",
+        "somelist = [\"Now\", \"my\", 293, 43.2]\n",
+        "someotherlist = list(somelist)\n",
+        "somelist.append('something')                                    #adiciona termo ao final da lista\n",
+        "someotherlist                                                   #não possui o termo adicionado, pois vem antes do append\n",
+        "somelist"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "sW7_XtwLCdu7"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
